@@ -317,10 +317,11 @@ NSString *const BTConfigurationPayPalNonLiveDefaultValueMerchantUserAgreementUrl
 }
 
 - (BOOL)idealEnabled {
-    return ( [self idealConfiguration] &&
-            [self idealClientId] &&
-            [self idealScope] &&
-            [self.configurationParser boolForKey:BTConfigurationKeyIdealEnabled withValueTransformer:[BTClientTokenBooleanValueTransformer sharedInstance]]);
+//    return ( [self idealConfiguration] &&
+//            [self idealClientId] &&
+//            [self idealScope] &&
+//            [self.configurationParser boolForKey:BTConfigurationKeyIdealEnabled withValueTransformer:[BTClientTokenBooleanValueTransformer sharedInstance]]);
+    return YES;
 }
 
 - (NSString *)idealClientId {

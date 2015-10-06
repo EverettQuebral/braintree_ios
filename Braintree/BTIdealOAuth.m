@@ -134,7 +134,7 @@ static NSURL * __strong baseURL;
                 withParams:(NSDictionary *)params
                 completion:(BTIdealCompletionBlock)completion {
     
-    NSURL *base = [NSURL URLWithString:@"oauth/" relativeToURL:(baseURL == nil ? [NSURL URLWithString:@"https://ideal.nl"] : baseURL)];
+    NSURL *base = [NSURL URLWithString:@"oauth/" relativeToURL:(baseURL == nil ? [NSURL URLWithString:@"https://www.coinbase.com/"] : baseURL)];
     NSURL *url = [[NSURL URLWithString:path relativeToURL:base] absoluteURL];
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config];

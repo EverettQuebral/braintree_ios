@@ -11,11 +11,7 @@
 		034EF7CE1AC367EB00CC25D8 /* BTTestClientTokenFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F6CB211AC08234007AD979 /* BTTestClientTokenFactory.m */; };
 		0D9D2B8667235033E88D7A23 /* libPods-Logic-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB88ED84A6F03DA5EEC2848 /* libPods-Logic-Tests.a */; };
 		12AD129A1BC48A5F00F4CF33 /* BraintreeDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1621750E192D922F008DC35D /* BraintreeDemoAppDelegate.m */; };
-		12D7AF791BB9D8D4007EFC7A /* BTPayPalIdealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D7AF781BB9D8D4007EFC7A /* BTPayPalIdealViewController.m */; settings = {ASSET_TAGS = (); }; };
 		12D7AF7C1BB9E9DB007EFC7A /* BraintreeDemoPayPalIdealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D7AF7B1BB9E9DB007EFC7A /* BraintreeDemoPayPalIdealViewController.m */; settings = {ASSET_TAGS = (); }; };
-		12D7AF801BBAF782007EFC7A /* BTIdeal.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D7AF7F1BBAF782007EFC7A /* BTIdeal.m */; settings = {ASSET_TAGS = (); }; };
-		12D7AF841BBAF92C007EFC7A /* BTIdealDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D7AF831BBAF92C007EFC7A /* BTIdealDefines.m */; settings = {ASSET_TAGS = (); }; };
-		12D7AF871BBAFA10007EFC7A /* BTIdealOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D7AF861BBAFA10007EFC7A /* BTIdealOAuth.m */; settings = {ASSET_TAGS = (); }; };
 		137D150CAF78BC9B8B08D9FF /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDBD0F3DF164AD1B1A34073 /* libPods-Tests.a */; };
 		14635ACA2F22A649D38DF214 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDBD0F3DF164AD1B1A34073 /* libPods-Tests.a */; };
 		1607FE3B192D96BE0099D504 /* DESIGN.md in Resources */ = {isa = PBXBuildFile; fileRef = 1607FE37192D96BE0099D504 /* DESIGN.md */; };
@@ -3492,22 +3488,18 @@
 				CD9EDC3A622EF8D5E829AF4F /* BraintreeDemoBTPaymentButtonViewController.m in Sources */,
 				CD9ED01B5D4C252AB05947DF /* BraintreeDemoBTUIPayPalButtonViewController.m in Sources */,
 				1633577E1AEE103000794AAA /* BraintreeDemoCreditCardEntryViewController.m in Sources */,
-				12D7AF791BB9D8D4007EFC7A /* BTPayPalIdealViewController.m in Sources */,
-				12D7AF871BBAFA10007EFC7A /* BTIdealOAuth.m in Sources */,
 				CD9ED3C05BDBA0AD69EEEF08 /* BraintreeDemoBTUIVenmoButtonViewController.m in Sources */,
 				CD9ED837ABFD9D75B936957D /* BraintreeDemoCustomMultiPayViewController.m in Sources */,
 				163357911AEE1E5D00794AAA /* BraintreeDemoPaymentButtonBaseViewController.m in Sources */,
 				CD9ED61B36AD616A658CB48F /* BraintreeDemoApplePayPaymentProviderViewController.m in Sources */,
 				CD9EDCC2C746987970624D05 /* BraintreeDemoCustomPayPalButtonViewController.m in Sources */,
 				CD9ED8935FEC23086262CB85 /* BraintreeDemoCustomVenmoButtonViewController.m in Sources */,
-				12D7AF841BBAF92C007EFC7A /* BTIdealDefines.m in Sources */,
 				CD9ED4A9AD99B6130D0499E4 /* BraintreeDemoApplePayPassKitViewController.m in Sources */,
 				842E21C91B0270C90036DA66 /* BraintreeDemoCustomCoinbaseButtonViewController.m in Sources */,
 				CD9ED8C5A85D7AF64C4F2340 /* BraintreeDemoDeprecatedBTPayPalButtonViewController.m in Sources */,
 				16C402B91AEF3906004E6881 /* BraintreeDemoBraintreeDataViewController.m in Sources */,
 				1633577D1AEE103000794AAA /* BraintreeDemoCardHintViewController.m in Sources */,
 				A71322C21B4C71F500F2D326 /* BraintreeDemoScopesPayPalButtonViewController.m in Sources */,
-				12D7AF801BBAF782007EFC7A /* BTIdeal.m in Sources */,
 				CD9ED53E9C13C386FFF05FC2 /* BraintreeDemoThreeDSecureViewController.m in Sources */,
 				163357801AEE103000794AAA /* BraintreeDemoPaymentsUIComponentsViewController.m in Sources */,
 				A76819A61B0D12B900736F52 /* BraintreeDemoSlideNavigationController.m in Sources */,
@@ -4153,7 +4145,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = "$(inherited)";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -4230,6 +4222,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = "$(inherited)";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
