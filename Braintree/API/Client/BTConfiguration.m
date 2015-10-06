@@ -39,6 +39,13 @@ NSString *const BTConfigurationKeyCoinbaseMerchantAccount = @"merchantAccount";
 NSString *const BTConfigurationKeyCoinbaseScope = @"scopes";
 NSString *const BTConfigurationKeyCoinbaseEnvironment = @"environment";
 
+NSString *const BTConfigurationKeyIdealEnabled = @"idealEnabled";
+NSString *const BTConfigurationKeyIdeal = @"ideal";
+NSString *const BTConfigurationKeyIdealClientId = @"clientId";
+NSString *const BTConfigurationKeyIdealMerchantAccount = @"merchantAccount";
+NSString *const BTConfiguraitonKeyIdealScope = @"scopes";
+NSString *const BTConfiguraitonKeyIdealEnvironment = @"environment";
+
 NSString *const BTConfigurationPayPalNonLiveDefaultValueMerchantName = @"Offline Test Merchant";
 NSString *const BTConfigurationPayPalNonLiveDefaultValueMerchantPrivacyPolicyUrl = @"http://example.com/privacy";
 NSString *const BTConfigurationPayPalNonLiveDefaultValueMerchantUserAgreementUrl = @"http://example.com/tos";
@@ -302,6 +309,37 @@ NSString *const BTConfigurationPayPalNonLiveDefaultValueMerchantUserAgreementUrl
 - (NSString *)coinbaseEnvironment {
     return [self.coinbaseConfiguration stringForKey:BTConfigurationKeyCoinbaseEnvironment];
 }
+
+#pragma mark Ideal
+
+- (BTAPIResponseParser *) idealConfiguration {
+    return [self.configurationParser responseParserForKey:BTConfigurationKeyIdeal];
+}
+
+- (BOOL)idealEnabled {
+    return ( [self idealConfiguration] &&
+            [self idealClientId] &&
+            [self idealScope] &&
+            [self.configurationParser boolForKey:BTConfigurationKeyIdealEnabled withValueTransformer:[BTClientTokenBooleanValueTransformer sharedInstance]]);
+}
+
+- (NSString *)idealClientId {
+    return [self.idealConfiguration stringForKey:BTConfigurationKeyIdealClientId];
+}
+
+- (NSString *)idealMerchantAccount {
+    return [self.idealConfiguration stringForKey:BTConfigurationKeyIdealMerchantAccount];
+}
+
+- (NSString *)idealScope {
+    return [self.idealConfiguration stringForKey:BTConfiguraitonKeyIdealScope];
+}
+
+- (NSString *)idealEnvironment {
+    return [self.idealConfiguration stringForKey:BTConfiguraitonKeyIdealEnvironment];
+}
+
+
 
 #pragma mark Venmo
 

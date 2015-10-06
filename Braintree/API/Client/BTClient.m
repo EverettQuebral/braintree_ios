@@ -15,6 +15,8 @@
 #import "BTAPIResponseParser.h"
 #import "BTClientPaymentMethodValueTransformer.h"
 #import "BTCoinbasePaymentMethod_Internal.h"
+#import "../Models/BTIdealPaymentMethod_Internal.h"
+
 
 @interface BTClient ()
 - (void)setMetadata:(BTClientMetadata *)metadata;
@@ -599,6 +601,21 @@
                           }
                       }
                   }];
+}
+
+- (void) saveIdealAccount:(id)idealAuthResponse
+             storeInVault:(BOOL)storeInVault
+                  success:(BTClientIdealSuccessBlock)successBlock
+                  failure:(BTClientFailureBlock)failureBlock{
+    // not sure of the implementation details of this one, right now just decide whether we use the
+    // success based from the storeInVault value
+    if (storeInVault){
+        successBlock(idealAuthResponse);
+    }
+    else {
+        failureBlock(idealAuthResponse);
+    }
+    
 }
 
 #pragma mark Braintree Analytics

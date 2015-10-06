@@ -16,6 +16,9 @@
 #import "BTCoinbase.h"
 #import "BTCoinbaseOAuth.h"
 
+#import "BTIdeal.h"
+#import "BTIdealOAuth.h"
+
 typedef void (^BTPaymentsSpecHelperBlock)(id, NSError *);
 
 @interface BTPaymentsSpecHelper : NSObject <BTPaymentMethodCreationDelegate>

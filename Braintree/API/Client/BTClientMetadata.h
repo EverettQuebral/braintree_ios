@@ -8,6 +8,8 @@ typedef NS_ENUM(NSInteger, BTClientMetadataSourceType) {
     BTClientMetadataSourceUnknown,
     BTClientMetadataSourceCoinbaseApp,
     BTClientMetadataSourceCoinbaseBrowser,
+    BTClientMetadataSourceIdealApp,
+    BTClientMetadataSourceIdealBrowser,
 };
 
 typedef NS_ENUM(NSInteger, BTClientMetadataIntegrationType) {

@@ -53,6 +53,9 @@
         case BTPaymentProviderTypeCoinbase:
             [self authorizeCoinbase];
             break;
+        case BTPaymentProviderTypeIdeal:
+            [self authorizeIdeal];
+            break;
         default:
             break;
     }
@@ -84,6 +87,10 @@
         }
         case BTPaymentProviderTypeCoinbase: {
             id <BTAppSwitching> appSwitching = [[BTAppSwitch sharedInstance] appSwitchingForApp:BTAppTypeCoinbase];
+            return [appSwitching appSwitchAvailableForClient:self.client];
+        }
+        case BTPaymentProviderTypeIdeal : {
+            id <BTAppSwitching> appSwitching = [[BTAppSwitch sharedInstance] appSwitchingForApp:BTAppTypeIdeal];
             return [appSwitching appSwitchAvailableForClient:self.client];
         }
         default: return NO;
@@ -191,6 +198,18 @@
     if (appSwitchSuccess) {
         [self informDelegateWillPerformAppSwitch];
     } else {
+        [self informDelegateDidFailWithError:error andPostAnalyticsEvent:YES];
+    }
+}
+
+#pragma mark Ideal
+- (void) authorizeIdeal {
+    NSError *error;
+    BOOL appSwitchSuccess = [[[BTAppSwitch sharedInstance] appSwitchingForApp:BTAppTypeIdeal] initiateAppSwitchWithClient:self.client delegate:self error:&error];
+    if (appSwitchSuccess){
+        [self informDelegateWillPerformAppSwitch];
+    }
+    else {
         [self informDelegateDidFailWithError:error andPostAnalyticsEvent:YES];
     }
 }

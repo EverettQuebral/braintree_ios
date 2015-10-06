@@ -17,6 +17,7 @@
 			<string>BraintreeDemoDropInViewController</string>
 			<key>Titles</key>
 			<array>
+				<string>PayPal - Ideal</string>
 				<string>PayPal - Scopes</string>
 				<string>Credit Card Tokenization</string>
 				<string>Combined Button - BTPaymentButton</string>
@@ -37,6 +38,7 @@
 			</array>
 			<key>Values</key>
 			<array>
+				<string>BraintreeDemoPayPalIdealViewController</string>
 				<string>BraintreeDemoScopesPayPalButtonViewController</string>
 				<string>BraintreeDemoCardTokenizationViewController</string>
 				<string>BraintreeDemoBTPaymentButtonViewController</string>

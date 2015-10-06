@@ -7,6 +7,7 @@ typedef NS_ENUM(NSInteger, BTAppType) {
     BTAppTypeVenmo,
     BTAppTypeApplePay,
     BTAppTypeCoinbase,
+    BTAppTypeIdeal,
 };
 
 NS_ASSUME_NONNULL_BEGIN

@@ -118,6 +118,13 @@ extern NSString *const BTConfigurationPayPalNonLiveDefaultValueMerchantUserAgree
 - (NSString *)applePayMerchantIdentifier;
 - (NSArray *)applePaySupportedNetworks;
 
+#pragma mark Ideal
+- (BOOL) idealEnabled;
+- (NSString *)idealClientId;
+- (NSString *)idealMerchantAccount;
+- (NSString *)idealScope;
+- (NSString *)idealEnvironment;
+
 #pragma mark -
 
 //// Initialize Configuration with a configuration response parser fetched from Braintree.

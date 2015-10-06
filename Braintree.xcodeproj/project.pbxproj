@@ -10,6 +10,12 @@
 		006DF886AA8467222145BEE3 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDBD0F3DF164AD1B1A34073 /* libPods-Tests.a */; };
 		034EF7CE1AC367EB00CC25D8 /* BTTestClientTokenFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F6CB211AC08234007AD979 /* BTTestClientTokenFactory.m */; };
 		0D9D2B8667235033E88D7A23 /* libPods-Logic-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB88ED84A6F03DA5EEC2848 /* libPods-Logic-Tests.a */; };
+		12AD129A1BC48A5F00F4CF33 /* BraintreeDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1621750E192D922F008DC35D /* BraintreeDemoAppDelegate.m */; };
+		12D7AF791BB9D8D4007EFC7A /* BTPayPalIdealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D7AF781BB9D8D4007EFC7A /* BTPayPalIdealViewController.m */; settings = {ASSET_TAGS = (); }; };
+		12D7AF7C1BB9E9DB007EFC7A /* BraintreeDemoPayPalIdealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D7AF7B1BB9E9DB007EFC7A /* BraintreeDemoPayPalIdealViewController.m */; settings = {ASSET_TAGS = (); }; };
+		12D7AF801BBAF782007EFC7A /* BTIdeal.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D7AF7F1BBAF782007EFC7A /* BTIdeal.m */; settings = {ASSET_TAGS = (); }; };
+		12D7AF841BBAF92C007EFC7A /* BTIdealDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D7AF831BBAF92C007EFC7A /* BTIdealDefines.m */; settings = {ASSET_TAGS = (); }; };
+		12D7AF871BBAFA10007EFC7A /* BTIdealOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D7AF861BBAFA10007EFC7A /* BTIdealOAuth.m */; settings = {ASSET_TAGS = (); }; };
 		137D150CAF78BC9B8B08D9FF /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDBD0F3DF164AD1B1A34073 /* libPods-Tests.a */; };
 		14635ACA2F22A649D38DF214 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDBD0F3DF164AD1B1A34073 /* libPods-Tests.a */; };
 		1607FE3B192D96BE0099D504 /* DESIGN.md in Resources */ = {isa = PBXBuildFile; fileRef = 1607FE37192D96BE0099D504 /* DESIGN.md */; };
@@ -45,7 +51,6 @@
 		162174E2192D9220008DC35D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162174E1192D9220008DC35D /* CoreGraphics.framework */; };
 		162174E3192D9220008DC35D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A75DA3651921394200D997A2 /* UIKit.framework */; };
 		1621752A192D922F008DC35D /* BraintreeDemoMerchantAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1621750B192D922F008DC35D /* BraintreeDemoMerchantAPI.m */; };
-		1621752B192D922F008DC35D /* BraintreeDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1621750E192D922F008DC35D /* BraintreeDemoAppDelegate.m */; };
 		16217531192D922F008DC35D /* BraintreeDemoCardTokenizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1621751A192D922F008DC35D /* BraintreeDemoCardTokenizationViewController.m */; };
 		16217532192D922F008DC35D /* BraintreeDemoCardTokenizationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1621751B192D922F008DC35D /* BraintreeDemoCardTokenizationViewController.xib */; };
 		16217533192D922F008DC35D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1621751E192D922F008DC35D /* Images.xcassets */; };
@@ -289,6 +294,17 @@
 		056170AD4ACC47C1B438CA86 /* libPods-Braintree-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Braintree-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0952D25AC13D43208F8288B6 /* libPods-Braintree-AppSwitch-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Braintree-AppSwitch-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F7931709275A7F21E17341B /* Pods-Logic-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logic-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Logic-Tests/Pods-Logic-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		12D7AF771BB9D8D4007EFC7A /* BTPayPalIdealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTPayPalIdealViewController.h; sourceTree = "<group>"; };
+		12D7AF781BB9D8D4007EFC7A /* BTPayPalIdealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTPayPalIdealViewController.m; sourceTree = "<group>"; };
+		12D7AF7A1BB9E9DB007EFC7A /* BraintreeDemoPayPalIdealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BraintreeDemoPayPalIdealViewController.h; sourceTree = "<group>"; };
+		12D7AF7B1BB9E9DB007EFC7A /* BraintreeDemoPayPalIdealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BraintreeDemoPayPalIdealViewController.m; sourceTree = "<group>"; };
+		12D7AF7E1BBAF782007EFC7A /* BTIdeal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTIdeal.h; sourceTree = "<group>"; };
+		12D7AF7F1BBAF782007EFC7A /* BTIdeal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTIdeal.m; sourceTree = "<group>"; };
+		12D7AF811BBAF8B8007EFC7A /* Braintree-Ideal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Braintree-Ideal.h"; sourceTree = "<group>"; };
+		12D7AF821BBAF92C007EFC7A /* BTIdealDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTIdealDefines.h; sourceTree = "<group>"; };
+		12D7AF831BBAF92C007EFC7A /* BTIdealDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTIdealDefines.m; sourceTree = "<group>"; };
+		12D7AF851BBAFA10007EFC7A /* BTIdealOAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTIdealOAuth.h; sourceTree = "<group>"; };
+		12D7AF861BBAFA10007EFC7A /* BTIdealOAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTIdealOAuth.m; sourceTree = "<group>"; };
 		133578558B4E45ECA2C2D586 /* libPods-Braintree-PayPal-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Braintree-PayPal-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15AD2CC443481E5FA269CB4D /* Pods-Braintree-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Braintree-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Braintree-Demo/Pods-Braintree-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		1600ABC119B7D04900D25D93 /* BTUIPaymentButtonCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUIPaymentButtonCollectionViewCell.h; sourceTree = "<group>"; };
@@ -1004,6 +1020,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		126A53721BB9B1A200B5028E /* PayPal - Ideal */ = {
+			isa = PBXGroup;
+			children = (
+				12D7AF7A1BB9E9DB007EFC7A /* BraintreeDemoPayPalIdealViewController.h */,
+				12D7AF7B1BB9E9DB007EFC7A /* BraintreeDemoPayPalIdealViewController.m */,
+			);
+			name = "PayPal - Ideal";
+			sourceTree = "<group>";
+		};
+		126A53761BB9B30600B5028E /* PayPal-Ideal */ = {
+			isa = PBXGroup;
+			children = (
+				12D7AF7D1BBAF706007EFC7A /* @Public */,
+				12D7AF771BB9D8D4007EFC7A /* BTPayPalIdealViewController.h */,
+				12D7AF781BB9D8D4007EFC7A /* BTPayPalIdealViewController.m */,
+				12D7AF7F1BBAF782007EFC7A /* BTIdeal.m */,
+				12D7AF821BBAF92C007EFC7A /* BTIdealDefines.h */,
+				12D7AF831BBAF92C007EFC7A /* BTIdealDefines.m */,
+				12D7AF851BBAFA10007EFC7A /* BTIdealOAuth.h */,
+				12D7AF861BBAFA10007EFC7A /* BTIdealOAuth.m */,
+			);
+			name = "PayPal-Ideal";
+			sourceTree = "<group>";
+		};
+		12D7AF7D1BBAF706007EFC7A /* @Public */ = {
+			isa = PBXGroup;
+			children = (
+				12D7AF7E1BBAF782007EFC7A /* BTIdeal.h */,
+				12D7AF811BBAF8B8007EFC7A /* Braintree-Ideal.h */,
+			);
+			name = "@Public";
+			sourceTree = "<group>";
+		};
 		1607FE3A192D96BE0099D504 /* Docs */ = {
 			isa = PBXGroup;
 			children = (
@@ -1933,6 +1982,7 @@
 		16E7B02F19E637390057ABB7 /* Braintree */ = {
 			isa = PBXGroup;
 			children = (
+				126A53761BB9B30600B5028E /* PayPal-Ideal */,
 				A7021B071921631C0090CE8F /* Braintree_Internal.h */,
 				A75DA34B1921392E00D997A2 /* Braintree.h */,
 				A75DA34C1921392E00D997A2 /* Braintree.m */,
@@ -2014,6 +2064,7 @@
 		16F9996819AE7287007ADA2C /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				126A53721BB9B1A200B5028E /* PayPal - Ideal */,
 				163357831AEE1A0A00794AAA /* Apple Pay - BTPaymentProvider */,
 				163357821AEE19F200794AAA /* Apple Pay - PassKit */,
 				16D962A51AFC26DC00FB3459 /* Coinbase - BTUICoinbaseButton */,
@@ -2700,7 +2751,6 @@
 						TestTargetID = 162174DE192D9220008DC35D;
 					};
 					162174DE192D9220008DC35D = {
-						DevelopmentTeam = 43253H4X22;
 						SystemCapabilities = {
 							com.apple.OMC = {
 								enabled = 1;
@@ -3430,7 +3480,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1621752B192D922F008DC35D /* BraintreeDemoAppDelegate.m in Sources */,
+				12AD129A1BC48A5F00F4CF33 /* BraintreeDemoAppDelegate.m in Sources */,
 				16F3A7E51AEC909800628DBF /* BraintreeDemoDemoContainmentViewController.m in Sources */,
 				842E21C81B02708E0036DA66 /* BraintreeDemoBTUICoinbaseButtonViewController.m in Sources */,
 				16217531192D922F008DC35D /* BraintreeDemoCardTokenizationViewController.m in Sources */,
@@ -3442,21 +3492,26 @@
 				CD9EDC3A622EF8D5E829AF4F /* BraintreeDemoBTPaymentButtonViewController.m in Sources */,
 				CD9ED01B5D4C252AB05947DF /* BraintreeDemoBTUIPayPalButtonViewController.m in Sources */,
 				1633577E1AEE103000794AAA /* BraintreeDemoCreditCardEntryViewController.m in Sources */,
+				12D7AF791BB9D8D4007EFC7A /* BTPayPalIdealViewController.m in Sources */,
+				12D7AF871BBAFA10007EFC7A /* BTIdealOAuth.m in Sources */,
 				CD9ED3C05BDBA0AD69EEEF08 /* BraintreeDemoBTUIVenmoButtonViewController.m in Sources */,
 				CD9ED837ABFD9D75B936957D /* BraintreeDemoCustomMultiPayViewController.m in Sources */,
 				163357911AEE1E5D00794AAA /* BraintreeDemoPaymentButtonBaseViewController.m in Sources */,
 				CD9ED61B36AD616A658CB48F /* BraintreeDemoApplePayPaymentProviderViewController.m in Sources */,
 				CD9EDCC2C746987970624D05 /* BraintreeDemoCustomPayPalButtonViewController.m in Sources */,
 				CD9ED8935FEC23086262CB85 /* BraintreeDemoCustomVenmoButtonViewController.m in Sources */,
+				12D7AF841BBAF92C007EFC7A /* BTIdealDefines.m in Sources */,
 				CD9ED4A9AD99B6130D0499E4 /* BraintreeDemoApplePayPassKitViewController.m in Sources */,
 				842E21C91B0270C90036DA66 /* BraintreeDemoCustomCoinbaseButtonViewController.m in Sources */,
 				CD9ED8C5A85D7AF64C4F2340 /* BraintreeDemoDeprecatedBTPayPalButtonViewController.m in Sources */,
 				16C402B91AEF3906004E6881 /* BraintreeDemoBraintreeDataViewController.m in Sources */,
 				1633577D1AEE103000794AAA /* BraintreeDemoCardHintViewController.m in Sources */,
 				A71322C21B4C71F500F2D326 /* BraintreeDemoScopesPayPalButtonViewController.m in Sources */,
+				12D7AF801BBAF782007EFC7A /* BTIdeal.m in Sources */,
 				CD9ED53E9C13C386FFF05FC2 /* BraintreeDemoThreeDSecureViewController.m in Sources */,
 				163357801AEE103000794AAA /* BraintreeDemoPaymentsUIComponentsViewController.m in Sources */,
 				A76819A61B0D12B900736F52 /* BraintreeDemoSlideNavigationController.m in Sources */,
+				12D7AF7C1BB9E9DB007EFC7A /* BraintreeDemoPayPalIdealViewController.m in Sources */,
 				842E21C71B0190D80036DA66 /* BraintreeDemoIntegrationViewController.m in Sources */,
 				CD9ED3FEF7FF8E133BBF4960 /* BraintreeDemoUIWidgetsViewController.m in Sources */,
 			);
@@ -4066,7 +4121,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1DEAEF498A3A6102ADFDB404 /* Pods-Braintree-Demo.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -4098,7 +4153,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = "$(inherited)";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -4134,7 +4189,7 @@
 					"-Wall",
 					"-Wextra",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.braintreepayments.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.braintreepayments.Braintree-Ideal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -4148,7 +4203,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 15AD2CC443481E5FA269CB4D /* Pods-Braintree-Demo.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -4209,7 +4264,7 @@
 					"-Wall",
 					"-Wextra",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.braintreepayments.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.braintreepayments.Braintree-Ideal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;

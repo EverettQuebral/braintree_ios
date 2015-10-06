@@ -40,6 +40,7 @@ Pod::Spec.new do |s|
     s.dependency "Braintree/Venmo"
     s.dependency "Braintree/Coinbase"
     s.dependency "Braintree/Payments"
+    s.dependency "Braintree/PayPal-Ideal"
     s.resource_bundle = { "Braintree-Drop-In-Localization" => "Braintree/Drop-In/Localization/*.lproj" }
   end
 
@@ -90,6 +91,7 @@ Pod::Spec.new do |s|
     s.dependency "Braintree/PayPal"
     s.dependency "Braintree/Venmo"
     s.dependency "Braintree/Coinbase"
+    s.dependency "Braintree/PayPal-Ideal"
   end
 
   s.subspec "3D-Secure" do |s|
@@ -105,6 +107,12 @@ Pod::Spec.new do |s|
   s.subspec "Coinbase" do |s|
     s.source_files = "Braintree/Coinbase/**/*.{h,m}"
     s.public_header_files = "Braintree/Coinbase/@Public/*.h"
+    s.dependency "Braintree/API"
+  end
+  
+  s.subspec "PayPal-Ideal" do |s|
+    s.source_files = "Braintree/PayPal-Ideal/**/*.{h,m}"
+    s.public_header_files = "Braintree/PayPal-Ideal/@Public/*.h"
     s.dependency "Braintree/API"
   end
 end

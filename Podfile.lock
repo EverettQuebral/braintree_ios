@@ -45,16 +45,20 @@ PODS:
     - Braintree/Coinbase
     - Braintree/Payments
     - Braintree/PayPal
+    - Braintree/PayPal-Ideal
     - Braintree/UI
     - Braintree/Venmo
   - Braintree/Payments (3.9.3):
     - Braintree/API
     - Braintree/Coinbase
     - Braintree/PayPal
+    - Braintree/PayPal-Ideal
     - Braintree/Venmo
   - Braintree/PayPal (3.9.3):
     - Braintree/API
     - Braintree/UI
+  - Braintree/PayPal-Ideal (3.9.3):
+    - Braintree/API
   - Braintree/UI (3.9.3):
     - Braintree/API
   - Braintree/Venmo (3.9.3):
@@ -88,6 +92,7 @@ DEPENDENCIES:
   - Braintree/Apple-Pay (from `.`)
   - Braintree/Coinbase (from `.`)
   - Braintree/Data (from `.`)
+  - Braintree/PayPal-Ideal (from `.`)
   - CardIO
   - Expecta (~> 1.0.2)
   - FLEX
@@ -105,7 +110,7 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   Braintree:
-    :path: "."
+    :path: .
   KIF:
     :branch: master
     :git: https://github.com/kif-framework/KIF.git
@@ -122,7 +127,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
-  Braintree: 996027dcc8633569f2405bc57dca11f367050c60
+  Braintree: a47086400f953109ad89d4b78aeb32c71fb0d744
   CardIO: 3b0cc447bd0dd3d9552159365ba5c7b7f1db586a
   Expecta: 54e8a3530add08f4f0208c111355eda7cde74a53
   FLEX: 3c390976e788d3d447b614ea1714ffc8fc914cf3

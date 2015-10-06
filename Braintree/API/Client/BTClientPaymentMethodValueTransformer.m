@@ -5,8 +5,10 @@
 #import "BTMutablePayPalPaymentMethod.h"
 #import "BTMutableApplePayPaymentMethod.h"
 #import "BTCoinbasePaymentMethod_Internal.h"
+#import "BTIdealPaymentMethod_Internal.h"
 #import "BTPostalAddress.h"
 #import "BTPostalAddress_Internal.h"
+#import "BTIdealPaymentMethod.h"
 
 @implementation BTClientPaymentMethodValueTransformer
 
@@ -88,6 +90,14 @@
         coinbaseAccount.email = [[responseParser responseParserForKey:@"details"] stringForKey:@"email"];
         coinbaseAccount.description = coinbaseAccount.email;
         paymentMethod = coinbaseAccount;
+    }
+    else if ([type isEqualToString:@"IdealAccount"]){
+        BTIdealPaymentMethod *idealAccount = [[BTIdealPaymentMethod alloc] init];
+        idealAccount.nonce = [responseParser stringForKey:@"nonce"];
+//        idealAccount.email = [[responseParser responseParserForKey:@"details"] stringForKey:@"email"];
+        idealAccount.description = idealAccount.email;
+        paymentMethod = idealAccount;
+        
     } else {
         BTMutablePaymentMethod *genericPaymentMethod = [[BTMutablePaymentMethod alloc] init];
 

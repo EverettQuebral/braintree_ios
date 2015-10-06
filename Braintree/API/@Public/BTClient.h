@@ -5,13 +5,14 @@
 
 #import "BTApplePayPaymentMethod.h"
 #import "BTCoinbasePaymentMethod.h"
+#import "BTIdealPaymentMethod.h"
 
 #import "BTErrors.h"
 #import "BTClientCardRequest.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class BTClient, BTCoinbasePaymentMethod;
+@class BTClient, BTCoinbasePaymentMethod, BTIdealPaymentMethod;
 
 #pragma mark Types
 
@@ -38,6 +39,9 @@ typedef void (^BTClientPaypalSuccessBlock)(BTPayPalPaymentMethod *paypalPaymentM
 
 /// Success Block type for the Save Coinbase call
 typedef void (^BTClientCoinbaseSuccessBlock)(BTCoinbasePaymentMethod *coinbasePaymentMethod);
+
+/// Success Block type for the Save Ideal ccall
+typedef void (^BTClientIdealSuccessBlock)(BTIdealPaymentMethod *idealPaymentMethod);
 
 /// Success Block type for analytics events
 typedef void (^BTClientAnalyticsSuccessBlock)(void);
@@ -163,6 +167,13 @@ typedef void (^BTClientFailureBlock)(NSError *error);
                storeInVault:(BOOL)storeInVault
                     success:(nullable BTClientCoinbaseSuccessBlock)successBlock
                     failure:(nullable BTClientFailureBlock)failureBlock;
+
+
+#pragma mark - Ideal
+- (void)saveIdealAccount:(id)idealAuthResponse
+            storeInVault:(BOOL) storeInVault
+                 success:(nullable BTClientIdealSuccessBlock)successBlock
+                 failure:(nullable BTClientFailureBlock) failureBlock;
 
 #pragma mark Create a Braintree Analytics Event
 
