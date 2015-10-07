@@ -97,4 +97,8 @@
     return NSLocalizedStringWithDefaultValue(@"COINBASE", [self localizationTable], [self localizationBundle], @"Coinbase", @"Coinbase (as a standalone term, referring to the bitcoin wallet company)");
 }
 
++ (NSString *)PAYMENT_METHOD_TYPE_IDEAL {
+    return NSLocalizedStringWithDefaultValue(@"IDEAL", [self localizationTable], [self localizationBundle], @"Ideal", @"Ideal (as a standalone term, referring to the Ideal Payment Company");
+}
+
 @end

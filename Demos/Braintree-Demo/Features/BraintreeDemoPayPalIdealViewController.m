@@ -32,7 +32,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"PayPal Ideal";
+    self.title = @"PayPal Ideal Demo";
+}
+
+- (UIView *) showItemToBuy {
+//    UIView *view = [[UIView alloc] initForAutoLayout];
+//    UILabel *label [UILabel alloc]
+//    return view;
+    return nil;
 }
 
 - (UIView *) paymentButton {

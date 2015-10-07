@@ -65,6 +65,7 @@
 }
 
 - (BOOL) initiateAppSwitchWithClient:(BTClient *)client delegate:(id<BTAppSwitchingDelegate>)delegate error:(NSError * _Nullable __autoreleasing *)error {
+    // TODO :: replace with the real ideal end point
     [BTIdealOAuth setBaseURL:[NSURL URLWithString:@"https://ideal.nl/"]];
     
     self.client = client;

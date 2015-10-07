@@ -47,6 +47,7 @@ static NSURL * __strong baseURL;
         }
     }
     if (!appSwitchSuccessful){
+        // TODO:: replace with real ideal endpoint
         NSURL *base = [NSURL URLWithString:path relativeToURL:(baseURL == nil ? [NSURL URLWithString:@"https://ideal.nl"] : baseURL)];
         NSURL *webUrl = [[NSURL URLWithString:path relativeToURL:base] absoluteURL];
         BOOL browserSwitchSuccessful = [[UIApplication sharedApplication] openURL:webUrl];
@@ -134,6 +135,7 @@ static NSURL * __strong baseURL;
                 withParams:(NSDictionary *)params
                 completion:(BTIdealCompletionBlock)completion {
     
+    // TODO :: replace with real Ideal endpoint
     NSURL *base = [NSURL URLWithString:@"oauth/" relativeToURL:(baseURL == nil ? [NSURL URLWithString:@"https://www.coinbase.com/"] : baseURL)];
     NSURL *url = [[NSURL URLWithString:path relativeToURL:base] absoluteURL];
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];

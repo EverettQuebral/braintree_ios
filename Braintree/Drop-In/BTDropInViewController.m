@@ -13,6 +13,7 @@
 #import "BTClient_Internal.h"
 #import "BTLogger_Internal.h"
 #import "BTCoinbase.h"
+#import "BTIdeal.h"
 
 @interface BTDropInViewController () < BTDropInSelectPaymentMethodViewControllerDelegate, BTUIScrollViewScrollRectToVisibleDelegate, BTUICardFormViewDelegate, BTPaymentMethodCreationDelegate, BTDropInViewControllerDelegate>
 
@@ -43,6 +44,9 @@
 @property (nonatomic, assign) BOOL cardEntryDidBegin;
 
 @property (nonatomic, assign) BOOL originalCoinbaseStoreInVault;
+
+/// Not sure of this now if this is necessary
+@property (nonatomic, assign) BOOL originalIdealStoreInVault;
 
 @end
 
@@ -589,6 +593,8 @@
             self.dropInContentView.selectedPaymentMethodView.type = BTUIPaymentMethodTypePayPal;
         } else if ([defaultPaymentMethod isKindOfClass:[BTCoinbasePaymentMethod class]]) {
             self.dropInContentView.selectedPaymentMethodView.type = BTUIPaymentMethodTypeCoinbase;
+        } else if ([defaultPaymentMethod isKindOfClass:[BTIdealPaymentMethod class]]) {
+            self.dropInContentView.selectedPaymentMethodView.type = BTUIPaymentMethodTypeIdeal;
         } else {
             self.dropInContentView.selectedPaymentMethodView.type = BTUIPaymentMethodTypeUnknown;
         }

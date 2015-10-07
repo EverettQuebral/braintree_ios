@@ -61,6 +61,8 @@
           return BTUILocalizedString(PAYPAL_CARD_BRAND);
     case BTUIPaymentMethodTypeCoinbase:
           return BTUILocalizedString(PAYMENT_METHOD_TYPE_COINBASE);
+    case BTUIPaymentMethodTypeIdeal:
+          return BTUILocalizedString(PAYMENT_METHOD_TYPE_IDEAL);
     }
     
 }
