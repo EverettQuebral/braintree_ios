@@ -5,6 +5,7 @@
 #import "BTUIVenmoButton.h"
 #import "BTUIPayPalButton.h"
 #import "BTUICoinbaseButton.h"
+#import "BTUIIdealButton.h"
 
 #import "BTPaymentProvider.h"
 #import "BTUIHorizontalButtonStackCollectionViewFlowLayout.h"
@@ -63,6 +64,7 @@ NSString *BTPaymentButtonPaymentButtonCellIdentifier = @"BTPaymentButtonPaymentB
                                         @(BTPaymentProviderTypePayPal),
                                         @(BTPaymentProviderTypeVenmo),
                                         @(BTPaymentProviderTypeCoinbase),
+                                        @(BTPaymentProviderTypeIdeal),
                                         nil];
 
     BTUIHorizontalButtonStackCollectionViewFlowLayout *layout = [[BTUIHorizontalButtonStackCollectionViewFlowLayout alloc] init];
@@ -169,6 +171,9 @@ NSString *BTPaymentButtonPaymentButtonCellIdentifier = @"BTPaymentButtonPaymentB
         if (![self.paymentProvider canCreatePaymentMethodWithProviderType:BTPaymentProviderTypeCoinbase]) {
             [mutableProviderTypes removeObject:@(BTPaymentProviderTypeCoinbase)];
         }
+        if (![self.paymentProvider canCreatePaymentMethodWithProviderType:BTPaymentProviderTypeIdeal]) {
+            [mutableProviderTypes removeObject:@(BTPaymentProviderTypeIdeal)];
+        }
         _filteredEnabledPaymentProviderTypes = [mutableProviderTypes copy];
     }
  
@@ -210,6 +215,9 @@ NSString *BTPaymentButtonPaymentButtonCellIdentifier = @"BTPaymentButtonPaymentB
         case BTPaymentProviderTypeCoinbase:
             paymentButton = [[BTUICoinbaseButton alloc] initWithFrame:cell.bounds];
             break;
+        case BTPaymentProviderTypeIdeal:
+            paymentButton = [[BTUIIdealButton alloc] initWithFrame:cell.bounds];
+            break;
         default:
             [[BTLogger sharedLogger] warning:@"BTPaymentButton encountered an unexpected BTPaymentProviderType value: %@", @(paymentMethod)];
             return cell;
@@ -246,6 +254,9 @@ NSString *BTPaymentButtonPaymentButtonCellIdentifier = @"BTPaymentButtonPaymentB
             break;
         case BTPaymentProviderTypeCoinbase:
             [self.paymentProvider createPaymentMethod:BTPaymentProviderTypeCoinbase];
+            break;
+        case BTPaymentProviderTypeIdeal:
+            [self.paymentProvider createPaymentMethod:BTPaymentProviderTypeIdeal];
             break;
         default:
             NSLog(@"BTPaymentButton collection view received didSelectItemAtIndexPath for unknown indexPath. This should never happen.");

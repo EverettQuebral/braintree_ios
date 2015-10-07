@@ -119,6 +119,12 @@
     return [UIColor colorWithRed: 0.053 green: 0.433 blue: 0.7 alpha: 1];
 }
 
+#pragma mark Ideal Colr
+
+- (UIColor *)idealPrimaryColor {
+    return [UIColor colorWithRed: 0.053 green: 0.433 blue: 0.7 alpha: 1];
+}
+
 #pragma mark Adjustments
 
 - (CGFloat)highlightedBrightnessAdjustment {

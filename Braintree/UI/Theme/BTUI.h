@@ -59,6 +59,10 @@
 
 - (UIColor *)coinbasePrimaryBlue;
 
+#pragma mark Ideal Color
+
+- (UIColor *)idealPrimaryColor;
+
 #pragma mark Typography
 
 - (UIFont *)controlFont;

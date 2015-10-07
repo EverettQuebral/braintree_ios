@@ -99,6 +99,20 @@
         cell.imageView.contentMode = UIViewContentModeCenter;
         cell.imageView.image = icon;
 
+    } else if ([paymentMethod isKindOfClass:[BTIdealPaymentMethod class]]){
+        BTIdealPaymentMethod *idealPaymentMethod = (BTIdealPaymentMethod *) paymentMethod;
+        NSString *typeString =BTUILocalizedString(PAYMENT_METHOD_TYPE_IDEAL);
+        NSMutableAttributedString *typeWithDescription = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ %@", typeString, (idealPaymentMethod.description ?: @"")]];
+        [typeWithDescription addAttribute:NSFontAttributeName value:self.theme.controlTitleFont range:NSMakeRange(0, [typeString length])];
+        [typeWithDescription addAttribute:NSFontAttributeName value:self.theme.controlDetailFont range:NSMakeRange([typeString length], [idealPaymentMethod.description length])];
+        cell.textLabel.attributedText = typeWithDescription;
+        
+        BTUIVectorArtView *iconArt = [[BTUI braintreeTheme] vectorArtViewForPaymentMethodType:BTUIPaymentMethodTypeIdeal];
+        UIImage *icon = [iconArt imageOfSize:CGSizeMake(42, 23)];
+        cell.imageView.contentMode = UIViewContentModeCenter;
+        cell.imageView.image = icon;
+
+        
     } else {
         cell.textLabel.text = [paymentMethod description];
         cell.imageView.image = nil;

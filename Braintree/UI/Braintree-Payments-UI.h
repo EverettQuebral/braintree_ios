@@ -7,3 +7,4 @@
 #import <Braintree/BTUIVenmoButton.h>
 #import <Braintree/BTUIPayPalButton.h>
 #import <Braintree/BTUICoinbaseButton.h>
+#import <Braintree/BTUIIdealButton.h>
