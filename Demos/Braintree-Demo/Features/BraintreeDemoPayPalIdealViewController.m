@@ -539,6 +539,16 @@ NSString *altPayId = @"";
     NSDictionary *issuer = [[NSDictionary alloc] initWithDictionary:[self.issuers objectAtIndex:indexPath.row]];
     
     cell.textLabel.text = [issuer objectForKey:@"id"];
+    
+    /// two issuers for now, INGBNL2A and RABONL2U
+    if ([cell.textLabel.text isEqualToString:@"INGBNL2A"]){
+        [cell.imageView setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://lh3.ggpht.com/MXg4jV17iSlhEr-5ZcemrpaH6_ZXQdoS3LQxRbZneb12Iez-t2mIYGJwrluz6_diTZM=w170"] ]]];
+    }
+    else if ([cell.textLabel.text isEqualToString:@"RABONL2U"]){
+        [cell.imageView setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://digimind.nl/wp-content/uploads/2012/07/ziningoud-rabobank-logo.png"]]]];
+    }
+    
+    
     return cell;
 }
 
