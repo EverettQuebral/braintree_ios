@@ -14,6 +14,7 @@ NSString *const BTIdealOAuthErrorUserInfoKey = @"IdealOAuthError";
 
 static NSURL * __strong baseURL;
 
+//// Ideal doesn't have an APP right now, we can just disregard this for now
 + (BOOL) isAppOAuthAuthenticationAvailable {
     return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"com.ideal.oauth-authorize://authorize"]];
 }
@@ -50,6 +51,8 @@ static NSURL * __strong baseURL;
         // TODO:: replace with real ideal endpoint
         NSURL *base = [NSURL URLWithString:path relativeToURL:(baseURL == nil ? [NSURL URLWithString:@"https://ideal.nl"] : baseURL)];
         NSURL *webUrl = [[NSURL URLWithString:path relativeToURL:base] absoluteURL];
+        
+        // we now open the page where we can select the Bank List
         BOOL browserSwitchSuccessful = [[UIApplication sharedApplication] openURL:webUrl];
         if (browserSwitchSuccessful){
             mechanism = BTIdealOAuthMechanismBrowser;

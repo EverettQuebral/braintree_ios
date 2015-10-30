@@ -131,6 +131,11 @@ typedef NS_ENUM(NSInteger, BTPaymentProviderStatus) {
 /// @param options Authorization options
 - (void)createPaymentMethod:(BTPaymentProviderType)type options:(BTPaymentMethodCreationOptions)options;
 
+/// Asychronously create a payment method for the given payment type and URL
+//- (void)createPaymentMethod:(BTPaymentProviderType)type urlString:(NSString *) urlString;
+- (void)createIdealPaymentMethod:(NSString *) urlString;
+
+
 /// Query whether it will be possible to create a payment method of the specified type.
 ///
 /// @return YES if this payment provider could create a payment method of the specified type

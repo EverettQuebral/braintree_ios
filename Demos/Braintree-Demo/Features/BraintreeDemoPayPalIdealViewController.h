@@ -11,6 +11,6 @@
 //#import "BraintreeDemoBaseViewController.h"
 #import "BraintreeDemoPaymentButtonBaseViewController.h"
 
-@interface BraintreeDemoPayPalIdealViewController : BraintreeDemoPaymentButtonBaseViewController
+@interface BraintreeDemoPayPalIdealViewController : BraintreeDemoPaymentButtonBaseViewController<NSURLSessionDelegate, UITableViewDelegate, UITableViewDataSource, UIWebViewDelegate>
 
 @end

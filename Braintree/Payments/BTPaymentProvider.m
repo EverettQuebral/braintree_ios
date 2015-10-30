@@ -37,6 +37,25 @@
     [self createPaymentMethod:type options:BTPaymentAuthorizationOptionMechanismAny];
 }
 
+- (void) createIdealPaymentMethod:(NSString *)urlString {
+    NSLog(@"url %@", urlString);
+    NSError *error;
+    
+    id _x = [[BTAppSwitch sharedInstance] appSwitchingForApp:BTAppTypeIdeal];
+    [_x setReturnURLScheme:@"com.braintreepayments.Braintree-Demo.payments"];
+    [_x setRedirectURL:urlString];
+    
+    BOOL appSwitchSuccess = [_x initiateAppSwitchWithClient:self.client delegate:self error:&error];
+    //    BOOL appSwitchSuccess = [[[BTAppSwitch sharedInstance] appSwitchingForApp:BTAppTypeIdeal] initiateAppSwitchWithClient:self.client delegate:self error:&error];
+    
+    if (appSwitchSuccess){
+        [self informDelegateWillPerformAppSwitch];
+    }
+    else {
+        [self informDelegateDidFailWithError:error andPostAnalyticsEvent:YES];
+    }
+}
+
 - (void)createPaymentMethod:(BTPaymentProviderType)type options:(BTPaymentMethodCreationOptions)options {
     [self setStatus:BTPaymentProviderStatusInitialized];
 
@@ -205,7 +224,13 @@
 #pragma mark Ideal
 - (void) authorizeIdeal {
     NSError *error;
-    BOOL appSwitchSuccess = [[[BTAppSwitch sharedInstance] appSwitchingForApp:BTAppTypeIdeal] initiateAppSwitchWithClient:self.client delegate:self error:&error];
+    
+    id _x = [[BTAppSwitch sharedInstance] appSwitchingForApp:BTAppTypeIdeal];
+    [_x setReturnURLScheme:@"com.braintreepayments.Braintree-Demo.payments"];
+    
+    BOOL appSwitchSuccess = [_x initiateAppSwitchWithClient:self.client delegate:self error:&error];
+//    BOOL appSwitchSuccess = [[[BTAppSwitch sharedInstance] appSwitchingForApp:BTAppTypeIdeal] initiateAppSwitchWithClient:self.client delegate:self error:&error];
+
     if (appSwitchSuccess){
         [self informDelegateWillPerformAppSwitch];
     }

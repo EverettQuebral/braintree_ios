@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSLog(@"Ideal will display the banks list");
+    
     // Do any additional setup after loading the view.
 }
 

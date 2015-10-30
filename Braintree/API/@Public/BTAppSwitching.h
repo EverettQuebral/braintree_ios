@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// with your Bundle ID, e.g. com.yourcompany.Your-App.payment
 @property (nonatomic, copy) NSString *returnURLScheme;
 
+@property (nonatomic, copy) NSString *redirectURL;
+
 /// A delegate that receives messages throughout the app switch cycle
 @property (nonatomic, weak) id<BTAppSwitchingDelegate>delegate;
 
@@ -53,6 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 ///  @param url The callback response URL.
 - (void)handleReturnURL:(NSURL *)url;
+
 
 @end
 

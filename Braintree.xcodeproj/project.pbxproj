@@ -11,7 +11,7 @@
 		034EF7CE1AC367EB00CC25D8 /* BTTestClientTokenFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F6CB211AC08234007AD979 /* BTTestClientTokenFactory.m */; };
 		0D9D2B8667235033E88D7A23 /* libPods-Logic-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB88ED84A6F03DA5EEC2848 /* libPods-Logic-Tests.a */; };
 		12AD129A1BC48A5F00F4CF33 /* BraintreeDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1621750E192D922F008DC35D /* BraintreeDemoAppDelegate.m */; };
-		12D7AF7C1BB9E9DB007EFC7A /* BraintreeDemoPayPalIdealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D7AF7B1BB9E9DB007EFC7A /* BraintreeDemoPayPalIdealViewController.m */; settings = {ASSET_TAGS = (); }; };
+		12D7AF7C1BB9E9DB007EFC7A /* BraintreeDemoPayPalIdealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D7AF7B1BB9E9DB007EFC7A /* BraintreeDemoPayPalIdealViewController.m */; };
 		137D150CAF78BC9B8B08D9FF /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDBD0F3DF164AD1B1A34073 /* libPods-Tests.a */; };
 		14635ACA2F22A649D38DF214 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDBD0F3DF164AD1B1A34073 /* libPods-Tests.a */; };
 		1607FE3B192D96BE0099D504 /* DESIGN.md in Resources */ = {isa = PBXBuildFile; fileRef = 1607FE37192D96BE0099D504 /* DESIGN.md */; };
@@ -2755,6 +2755,7 @@
 						TestTargetID = 162174DE192D9220008DC35D;
 					};
 					162174DE192D9220008DC35D = {
+						DevelopmentTeam = 6P65ES8YFG;
 						SystemCapabilities = {
 							com.apple.OMC = {
 								enabled = 1;
@@ -4161,7 +4162,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
@@ -4238,7 +4239,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_CFLAGS = (
 					"$(inherited)",

@@ -26,6 +26,13 @@
     return self;
 }
 
+- (void)setRedirectURL:(NSString *) redirectURL {
+    _redirectURL = redirectURL;
+    for (id<BTAppSwitching> switchingInstance in [self.appSwitchingInstances allValues]){
+        [switchingInstance setRedirectURL:redirectURL];
+    }
+}
+
 - (void)setReturnURLScheme:(NSString *)returnURLScheme {
     _returnURLScheme = returnURLScheme;
     for (id<BTAppSwitching> switchingInstance in [self.appSwitchingInstances allValues]) {

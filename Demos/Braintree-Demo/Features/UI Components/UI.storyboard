@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--Braintree Demo Credit Card Entry View Controller-->
@@ -29,6 +29,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Oz-AB-8gW" customClass="BTUISummaryView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="3nQ-qE-1JC"/>
@@ -41,6 +42,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tsd-3s-x7Y" customClass="BTUICTAControl">
                                 <rect key="frame" x="0.0" y="395" width="320" height="60"/>
+                                <animations/>
                                 <color key="backgroundColor" red="0.95425907259999998" green="0.12569303809999999" blue="0.12569303809999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.27709173387096775" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -56,6 +58,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wkk-Kj-bLk" customClass="BTUIPaymentMethodView">
                                 <rect key="frame" x="0.0" y="85" width="320" height="53"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="rps-j0-vLX"/>
@@ -67,8 +70,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="detailDescription" value="ends in 09"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDC-xT-Any">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDC-xT-Any">
                                 <rect key="frame" x="74" y="146" width="186" height="30"/>
+                                <animations/>
                                 <state key="normal" title="Randomly Swap Card Type">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -78,29 +82,34 @@
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4LD-74-01Q">
                                 <rect key="frame" x="251" y="184" width="51" height="31"/>
+                                <animations/>
                                 <connections>
                                     <action selector="toggledProcessingState:" destination="9xs-I4-YHF" eventType="valueChanged" id="8KU-hu-jCW"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Processing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66N-zH-HjJ">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Processing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66N-zH-HjJ">
                                 <rect key="frame" x="20" y="184" width="86" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enabled CTA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMj-D0-0dH">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enabled CTA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMj-D0-0dH">
                                 <rect key="frame" x="20" y="228" width="99" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xi1-hb-1JK">
                                 <rect key="frame" x="251" y="223" width="51" height="31"/>
+                                <animations/>
                                 <connections>
                                     <action selector="toggledCTAEnabled:" destination="9xs-I4-YHF" eventType="valueChanged" id="Nj1-bi-KPX"/>
                                 </connections>
                             </switch>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.98431378602981567" green="0.98431378602981567" blue="0.98431378602981567" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="66N-zH-HjJ" firstAttribute="top" secondItem="eDC-xT-Any" secondAttribute="bottom" constant="8" symbolic="YES" id="1vh-VW-Zfj"/>
@@ -142,6 +151,7 @@
                     <tabBarItem key="tabBarItem" systemItem="featured" id="z3b-eE-8lE"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="KZa-7v-zJU">
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                         <color key="barTintColor" red="0.16470588743686676" green="0.16470588743686676" blue="0.16862745583057404" alpha="1" colorSpace="deviceRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.95686280727386475" green="0.95686280727386475" blue="0.95686280727386475" alpha="1" colorSpace="deviceRGB"/>
@@ -169,6 +179,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXh-df-Dd0" customClass="BTUICardHint">
                                 <rect key="frame" x="60" y="28" width="200" height="37"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" placeholder="YES" id="Ju2-ny-UBh"/>
@@ -177,6 +188,7 @@
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MjB-rt-EdM">
                                 <rect key="frame" x="20" y="383" width="280" height="29"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="MOM-uE-xMV"/>
                                 </constraints>
@@ -191,8 +203,9 @@
                                     <action selector="selectedCardType:" destination="zdc-x5-ltt" eventType="valueChanged" id="6jw-za-XRJ"/>
                                 </connections>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ILD-99-lkK">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ILD-99-lkK">
                                 <rect key="frame" x="120" y="419" width="81" height="29"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="kHE-Pe-8CM"/>
                                 </constraints>
@@ -206,6 +219,7 @@
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oFS-sS-pwG" customClass="BTUICardHint">
                                 <rect key="frame" x="133" y="93" width="44" height="35"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" placeholder="YES" id="Bll-Dg-tln"/>
@@ -213,6 +227,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="0.9803922176361084" green="0.9803922176361084" blue="0.9803922176361084" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="oFS-sS-pwG" secondAttribute="centerX" constant="5.5" id="56F-Gh-s4D"/>
@@ -244,6 +259,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
@@ -264,25 +280,31 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="125" sectionHeaderHeight="22" sectionFooterHeight="22" id="JRs-un-o1w">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection id="vrA-X8-geR">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="125" id="e2L-Un-U1f">
+                                        <rect key="frame" x="0.0" y="64" width="320" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e2L-Un-U1f" id="sgG-FR-fEp">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="49" placeholderIntrinsicHeight="39" translatesAutoresizingMaskIntoConstraints="NO" id="cP7-HG-aSw" customClass="BTUICoinbaseWordmarkVectorArtView">
                                                     <rect key="frame" x="136" y="43" width="49" height="39"/>
+                                                    <animations/>
                                                 </view>
                                             </subviews>
+                                            <animations/>
                                             <color key="backgroundColor" red="0.98620854589999996" green="0.95368425769999998" blue="0.86758184719999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="centerY" secondItem="cP7-HG-aSw" secondAttribute="centerY" id="7OD-fn-jR7"/>
                                                 <constraint firstAttribute="centerX" secondItem="cP7-HG-aSw" secondAttribute="centerX" id="A8t-W0-Q1U"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <animations/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -306,6 +328,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="js7-C0-aYu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="oTz-3r-kdL" kind="relationship" relationship="rootViewController" id="NZL-1z-WGg"/>
@@ -324,6 +347,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="7EC-sJ-sHK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                         <color key="barTintColor" red="0.12156863510608673" green="0.12156863510608673" blue="0.12549020349979401" alpha="1" colorSpace="deviceRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -339,9 +363,4 @@
             <point key="canvasLocation" x="697" y="519"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

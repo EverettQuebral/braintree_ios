@@ -13,6 +13,8 @@
 @implementation BTPayPalAppSwitchHandler
 
 @synthesize returnURLScheme;
+@synthesize redirectURL;
+
 @synthesize delegate;
 
 + (void)load {

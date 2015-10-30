@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BTAppSwitch : NSObject
 
 @property (nonatomic, readwrite, copy) NSString *returnURLScheme;
+@property (nonatomic, readwrite, copy) NSString *redirectURL;
 
 + (instancetype)sharedInstance;
 

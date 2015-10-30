@@ -481,6 +481,7 @@
 
 - (void)paymentMethodCreatorDidCancel:(__unused id)sender {
     [[BTCoinbase sharedCoinbase] setStoreInVault:self.originalCoinbaseStoreInVault];
+    [[BTIdeal sharedIdeal] setStoreInVault:self.originalIdealStoreInVault];
 
     // Refresh payment methods display
     self.paymentMethods = self.paymentMethods;

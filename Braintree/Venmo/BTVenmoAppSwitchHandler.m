@@ -12,6 +12,7 @@
 @implementation BTVenmoAppSwitchHandler
 
 @synthesize returnURLScheme = _returnURLScheme;
+@synthesize redirectURL = _redirectURL;
 @synthesize delegate = _delegate;
 
 + (void)load {

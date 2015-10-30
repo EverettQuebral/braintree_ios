@@ -22,7 +22,9 @@
 
 @implementation BTIdeal
 
+
 @synthesize returnURLScheme = _returnURLScheme;
+@synthesize redirectURL = _redirectURL;
 @synthesize delegate = _delegate;
 
 + (void) load {
@@ -51,6 +53,8 @@
 #pragma mark Helpers
 
 - (NSURL *) redirectUri {
+    /// this is going to be challenging on the Ideal case as we don't really know what will
+    /// be the final return URL, unless we put the createPayment request here
     NSURLComponents *components = [[NSURLComponents alloc] init];
     components.scheme = [self returnURLScheme];
     components.path = @"/weneedtheurlhere";
@@ -64,9 +68,15 @@
     return client.configuration.idealEnabled == YES && self.disabled == NO;
 }
 
+
+//// interface that will be called to start the app switching and will be opened up as
+//// 
 - (BOOL) initiateAppSwitchWithClient:(BTClient *)client delegate:(id<BTAppSwitchingDelegate>)delegate error:(NSError * _Nullable __autoreleasing *)error {
-    // TODO :: replace with the real ideal end point
-    [BTIdealOAuth setBaseURL:[NSURL URLWithString:@"https://ideal.nl/"]];
+    
+    //// WE HAVE A PROBLEM HERE
+    //// Ideal will need to present a page for selecting the bank that will carry the transaction
+    //// if that is the case, the bank will be the one to carry the oauth handshake
+
     
     self.client = client;
     self.delegate = delegate;
@@ -93,7 +103,24 @@
         return NO;
     }
     
-    self.authenticationMechanism = [BTIdealOAuth startOAuthAuthenticationWithClientId:client.configuration.idealClientId scope:client.configuration.idealScope redirectUri:[self.redirectUri absoluteString] meta:(client.configuration.idealMerchantAccount ? @ { @"authorizations_merchant_account" : client.configuration.idealMerchantAccount } : nil )];
+    
+    //// this will open up the web
+//    self.authenticationMechanism = [BTIdealOAuth startOAuthAuthenticationWithClientId:client.configuration.idealClientId
+//                                                                                scope:client.configuration.idealScope
+//                                                                          redirectUri:[self.redirectUri absoluteString]
+//                                                                                 meta:(client.configuration.idealMerchantAccount ? @ { @"authorizations_merchant_account" : client.configuration.idealMerchantAccount } : nil )];
+    
+    // instead of calling an OAuth, we can just hard code that this is an appauthenticationmode
+    
+    self.authenticationMechanism = [BTIdealOAuth startOAuthAuthenticationWithClientId:client.configuration.idealClientId
+                                                                                scope:client.configuration.idealScope
+                                                                          redirectUri:_redirectURL
+                                                                                 meta:(client.configuration.idealMerchantAccount ? @ { @"authorizations_merchant_account" : client.configuration.idealMerchantAccount } : nil )];
+
+
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:_redirectURL]];
+    
+    self.authenticationMechanism =  BTIdealOAuthMechanismBrowser;
     
     switch (self.authenticationMechanism){
         case BTIdealOAuthMechanismNone :
@@ -121,7 +148,9 @@
     BOOL schemeMatches = [[url.scheme lowercaseString] isEqualToString:[redirectURL.scheme lowercaseString]];
     BOOL hostMatches = [url.host isEqualToString:redirectURL.host];
     BOOL pathMatches = [url.path isEqualToString:redirectURL.path];
-    return schemeMatches && hostMatches && pathMatches;
+    NSLog(@"%d, %d, %d", schemeMatches, hostMatches, pathMatches);
+//    return schemeMatches && hostMatches && pathMatches;
+    return YES;
 }
 
 - (void) handleReturnURL:(NSURL *)url {
