@@ -129,7 +129,8 @@ NSString *altPayId = @"";
     view.backgroundColor = [UIColor whiteColor];
     
     /// create an image view for showing an image of the product
-    UIImageView *productImageView = [[UIImageView alloc] initWithImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://puzzletoysforchildren.tk/wp-content/uploads/2014/10/the-logo-board-game-photo-001.jpg"]]]];
+    UIImageView *productImageView = [[UIImageView alloc] initWithImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://i00.i.aliimg.com/wsphoto/v0/598133408/Free-shipping-hot-sale-magnetic-wonderfully-versatile-painter-fantastic-wooden-easel-puzzle-toy-children-gift.jpg"]]]];
+    
     productImageView.frame = CGRectMake(10, 10, 160, 160);
     
     /// create a label to say about the title of the product
